@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+}
+
+/* main layout */
+.container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+
+    width: 100vw;
+    height: 100vh;
+}
+
+/* basic blocks */
+.box {
+    border: 1px solid black;
+}
+
+/* colors */
+.red { background-color: red; }
+.blue { background-color: blue; }
+.yellow { background-color: yellow; }
+.green { background-color: green; }
+.purple { background-color: purple; }
+
+/* different sizes (THIS makes it look like professor example) */
+.wide {
+    grid-column: span 2;
+}
+
+.tall {
+    grid-row: span 2;
+}
+
+.big {
+    grid-column: span 3;
+    grid-row: span 2;
+}
