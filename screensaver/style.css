@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  background: black;
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: lime;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+
+  animation: move 4s linear infinite;
+  animation-play-state: paused;
+  transition: background 0.5s;
+}
+
+.screen:hover .box {
+  animation-play-state: running;
+  background: cyan;
+}
+
+@keyframes move {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(300px,0); }
+  50% { transform: translate(300px,200px); }
+  75% { transform: translate(0,200px); }
+  100% { transform: translate(0,0); }
+}
